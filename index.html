@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Pets</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!--React-->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <!--React Dom-->
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <!--Babel-->
+    <script
+      crossorigin
+      src="https://unpkg.com/babel-standalone@6/babel.min.js"
+    ></script>
+
+    <script type="text/babel">
+      function Pet(props) {
+        return (
+          <div>
+            <h1>Rabbits</h1>
+            <img src={props.image} alt="bunny image" />
+            <p>{props.name}</p>
+            <p>{props.breed}</p>
+          </div>
+        );
+      }
+
+      let element = (
+        <div>
+          <Pet
+            name="Stella"
+            breed="Mini Lop"
+            image="https:sites.create-cdn.net/siteimages/59/4/8/594843/17/1/7/17173528/1334x1200.JPG"
+          />
+
+          <Pet
+            name="Lilah"
+            breed="Mini Rex"
+            image="https://squeaksandnibbles.com/wp-content/uploads/2018/04/mini-rex-rabbit-header1.jpg"
+          />
+        </div>
+      );
+
+      ReactDOM.render(element, document.getElementById("root"));
+    </script>
+  </body>
+</html>
